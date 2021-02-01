@@ -1,5 +1,5 @@
 const express = require('express');
-const products = require('./data/products.js')
+
 const connectDB = require('./config/db.js')
 const productRoutes = require('./routes/productRoutes');
 const dotenv = require('dotenv');

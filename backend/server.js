@@ -1,5 +1,12 @@
 const express = require('express');
 const products = require('./data/products.js')
+const dotenv = require('dotenv');
+
+dotenv.config()
+
+const PORT = process.env.PORT || 5000;
+
+
 const app=express();
 
 
@@ -14,4 +21,4 @@ console.log(products)
   res.json(product)
 })
 
-app.listen(5000,console.log('Server started'));
+app.listen(PORT,console.log(`Server started On ${PORT} in ${process.env.NODE_ENV}`));
